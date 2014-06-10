@@ -1,0 +1,11 @@
+/* FONT PATH
+ * -------------------------- */
+
+@font-face {
+  font-family: 'FontAwesome';
+  src: url(if($bootstrap-sass-asset-helper, twbs-font-path('#{$icon-font-path}fontawesome-webfont.eot'), '#{$icon-font-path}fontawesome-webfont.eot'));
+  src: url(if($bootstrap-sass-asset-helper, twbs-font-path('#{$icon-font-path}fontawesome-webfont.eot?#iefix'), '#{$icon-font-path}fontawesome-webfont.eot?#iefix')) format('embedded-opentype'),
+       url(if($bootstrap-sass-asset-helper, twbs-font-path('#{$icon-font-path}fontawesome-webfont.woff'), '#{$icon-font-path}fontawesome-webfont.woff')) format('woff'),
+       url(if($bootstrap-sass-asset-helper, twbs-font-path('#{$icon-font-path}fontawesome-webfont.ttf'), '#{$icon-font-path}fontawesome-webfont.ttf')) format('truetype'),
+       url(if($bootstrap-sass-asset-helper, twbs-font-path('#{$icon-font-path}fontawesome-webfont.svg##{$icon-font-svg-id}'), '#{$icon-font-path}fontawesome-webfont.svg##{$icon-font-svg-id}')) format('svg');
+}

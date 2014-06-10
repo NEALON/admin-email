@@ -1,0 +1,190 @@
+/**
+ * Autor: Sergey Ivanov
+ **/
+
+@import "variables";
+@import "bootstrap/bootstrap";
+@import "font-awesome";
+
+.header { background-color: $white; border-bottom: 1px solid #aeaeae;
+    .navbar-default {border: none;}
+    margin-bottom: 20px;
+    .navbar-nav > li > a { padding-top: 23px; padding-bottom: 23px;}   
+}
+
+.navbar-nav{
+    > li{
+        + li { @media(min-width: $screen-sm-min) { border-left: 1px solid #d6d6d6;} }
+        > a  > i {padding-right: 5px; font-size: 15px;}
+    }
+}
+
+.navs-nav {border-left: none; border-right: none;  
+    .navbar-header {background: #f7f7f7;padding-right: 10px;padding-left: 10px;
+        @media(min-width: $screen-xs-min){ background: #f7f7f7;padding-right: 5px;padding-left: 5px;}}
+    .navbar-nav > li 
+        > a {padding-left: 4px; padding-right: 4px; font-size: 11px; text-transform: none;
+            @media(min-width: $screen-md-min) { padding-left: 10px; padding-right: 10px; font-size: 12px; text-transform: uppercase;}
+            .fa {font-size: 12px;
+             @media(min-width: $screen-md-min) {font-size: 15px;}
+            }
+        }
+}
+
+.badge { padding: 1px 4px; font-size: 11px; margin-right: -5px; margin-top: -3px; background-color: #f80f0f; z-index: 3; position: relative;}
+
+.badge-now{ background-color: #cccccc; font-size: 11px; border: 1px solid darken(#cccccc, 15%); border-radius: 2px; padding: 1px 5px; margin-right: 1px; margin-left: 5px; margin-top: 0;}
+
+.wrapper-dashboard { background: #fbfbfb; border: 1px solid #d6d6d6; margin-bottom: 50px;
+    .wrapper-content { background: #f1f1f1; border-left: 1px solid #d6d6d6; min-height: 550px;
+        margin-left: (-$grid-gutter-width/2);
+        @media(min-width: $screen-sm-min) { margin-left: -$grid-gutter-width;}
+    }
+}
+
+.wrapper-sidebar-nav {/*max-width: 124px;*/ padding: 0; background-color: #fbfbfb; margin-right: (-$grid-gutter-width/2);
+    @media(min-width: $screen-sm-min) { padding: 10px;  margin-right: 0;}
+    
+    ul > li { margin-top: 10px; text-align: center;         
+        a { color: #505050; display: block; padding: 3px 1px; text-decoration: none; 
+             @media(min-width: $screen-xs-min) { padding: 10px 4px;}
+            &:hover, &:focus { color: black;
+                .ico { color: #21a5ff; }
+            }
+            
+            .ico { color: #c5c5c5; text-shadow: 1px 1px white; }
+        }
+        
+        .ico { font-size: 15px; @media(min-width: $screen-xs-min) {font-size: 30px;} }
+        
+        &.active a {border: 1px solid darken(#5fb9f6, 15%);}
+        
+        &.active a, &.active a .ico { border-radius: 0; background-color: #5fb9f6;  color: white; @media(min-width: $screen-sm-min) {border-radius: 4px;} }
+    }
+}
+
+.masthead-email { background-color: #f1f1f1;}
+
+.wrapper-email-nav { text-transform: uppercase; font-weight: bold;
+    .navs-nav { border-left: none; border-right: none;
+        .container-fluid { 
+             @media(min-width: $screen-sm-min) { padding:0;}
+            .navbar-collapse { padding:0; background-color: #f7f7f7; }           
+        }
+        
+        .navbar-nav { margin: 0; 
+            li + li { border-top: 1px solid #d6d6d6; @media(min-width: $screen-sm-min) {border-top: none;}}
+        }
+        .navbar-left { border-right: none; @media(min-width: $screen-lg-min) { border-right: 1px solid #d6d6d6;}}
+        .navbar-right {
+           > li { border: none; border-top: 1px solid #d6d6d6;  
+            @media(min-width: $screen-sm-min) { border-left: 1px solid #d6d6d6; border-top: none;}
+           }
+            .dropdown { border-left: none; @media(min-width: $screen-sm-min) { border-left: 1px solid #d6d6d6;}                    
+                .fa { position: relative; top: 2px;}
+            }
+        }
+    }
+}
+
+.wrapper-input { padding: 10px; border-right: 1px solid #d6d6d6; border-bottom: 1px solid #d6d6d6;
+    .form-group { margin-bottom: 0;
+        .glyphicon { top: 0; color: #e1e1e1; font-size: 15px;}
+    }
+}
+
+.fotos { padding-left: 0; border-right: 1px solid #d6d6d6; max-height: 1100px; overflow-x: hidden; overflow-y: scroll;
+    .item-person{ display: block; border-bottom: 1px solid #d6d6d6;
+            .main-text{padding-top: 13px;}
+            &.active { 
+               >.inner {background-color: #21a5ff; 
+                    h4, .h4 a {color: $blue;}}
+                    .h5 span{color: #464646; font-weight: bold;}
+            }          
+            > .inner {  padding-left: 5px; background-color:#fafafa;
+                 > .media {min-height: 80px;}
+                input {margin-top: 25px;}
+                img {margin-top: 7px;}
+                > * { background-color: #fafafa; padding: 10px;}
+                h4, .h4 a {font-size: 11px;
+                    @media(min-width: $screen-sm-min) {font-size: 13px;}
+                    color: #464646; font-weight: bold;}
+                .h5{color: #938f8f; margin-top: 0;}
+                .h6{color: #9c9c9c; float: left ! important; @media(min-width: $screen-md-min) {float: right ! important;}}
+                a {color: $black;}
+            }
+             &:hover {
+                >.inner {background-color: $blue;
+                    > .media {background-color: $blue;
+                        .h4, .h4 a, .h5, .h6, span {color: $white;}
+                        .badge-now {background-color: #2f87cb;}
+                    }
+                }
+            }
+    }
+}
+
+.masthead-email{ padding-left: 20px;
+    h3{font-size: 16px;}
+    h4{font-size: 15px; color:#aeacac;}
+    a{font-size: 11px;}
+    .btn-lg{margin-top: 18px;}
+}
+
+.btn-lg{ margin-right: 15px; float:none; margin-bottom: 10px;
+    @media(min-width: $screen-sm-min) {float: right;}
+}
+
+.right { margin-left: 0; background-color: $white;
+    @media(min-width: $screen-sm-min) { margin-left: -30px;}
+        .right-top { padding: 10px 0; border-bottom: 1px solid #d6d6d6; 
+            .h3 { margin-top: 3px; margin-bottom: 5px;}
+            .btn { padding: 6px 16px;
+                i {padding-right: 5px;}
+            }
+        }
+        .wrapper-right-content{ max-height: 1100px; overflow-x: hidden; overflow-y: scroll; background-color: #fafafa;
+            .right-content { background-color: $white; 
+                .right-content-top {padding-top: 10px; padding-bottom: 15px; border-bottom: 1px solid #d6d6d6; padding-left: 50px;}
+                .item-post { border-bottom: 1px solid #d6d6d6;
+                    .post-header {padding: 10px 0; 
+                        .media{ padding-right: 0; overflow: visible;
+                            .pull-left { margin-bottom: 12px;}
+                            .media-body { overflow: visible;}                            
+                        }                      
+                    }
+                    .post-body {padding: 20px 44px 20px 57px;
+                        p  { color: #403f3f; margin: 0 0 5px;}                       
+                        .thumbnail { float: left; margin-right: 10px;}
+                        .img-info {color: #656464; padding-top: 50px;}
+                    }
+                }
+            }
+        }
+}
+
+.post-header{
+    .h4 .link { display: inline-block; }
+    .h4, h4 a { font-size: 11.5px; margin-top: 0; margin-bottom: 0; 
+       .name, name a { font-weight: bold; color: #403f3f; } 
+       .email, .email a { color: #bababa; }
+    }
+    .send-to { display: inline-block;}
+    .send-to, .send-to a { margin-top: 5px; color: #b5b5b5;       
+            .fa { color: #a8a8a8;}
+    }
+    .dropdown { display: inline-block;}
+    .h6 { display: inline-block;}
+    .h6, h6 a { margin-right: 10px; color:#bbbbbb;}
+        .glyphicon { display: inline; margin-left: 10px; margin-right: 10px;}
+        .border-min { max-width: 210px; border-bottom: 1px solid #d6d6d6;}
+        /*.pull-right{ float: none !important; margin-top:25px; @media(min-width: $screen-sm-min) {float: right;margin-top:0;}}*/                       
+}
+
+.wrapper-right-content-bottom { padding: 25px;
+    textarea { }
+}
+
+.bold { font-weight: bold;}
+
+.nowrap { white-spacing: nowrap; }

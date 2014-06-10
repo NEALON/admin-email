@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Adminmail</title>
+
+    <!-- Styles -->
+	<link href="./assets/css/application.css" rel="stylesheet">
+
+	<script src="./assets/js/modernizr.js"></script>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="./assets/js/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>  
+	<!--Begin header-->
+    <header class="header">       
+            <!-- Begin nav -->            
+            <nav class="navbar navbar-default" role="navigation">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#toggle-menu">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+                </div>            
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="toggle-menu">
+                <ul class="nav navbar-nav navbar-right">                               
+                    <li  class="active"><a  class="line" href="#"><span class="badge pull-left">2</span><i class="fa fa-envelope"></i>Mail</a></li>
+                    <li><a  class="line" href="#"><i class="fa  fa-user"></i>My Account</a></li>
+                    <li><a class="line" href="#"><i class="fa fa-repeat"></i>Site Updates</a></li>
+                  </ul>                                     
+                </div><!-- /.navbar-collapse -->
+            </nav><!-- End nav -->
+    </header><!--End header-->
+    
+    <div class="container">
+    
+        <!-- Begin .wrapper-dashboard -->
+        <div class="wrapper-dashboard">
+            <div class="row">
+                <div class="col-xs-2">
+                
+                    <!-- Begin .wrapper-sidebar-nav -->
+                    <div class="wrapper-sidebar-nav">
+                        <nav class="navs clearfix">
+                            <ul class="list-unstyled">
+                                <li>
+                                    <a href="#">
+                                        <i class="glyphicon glyphicon-user ico"></i><br /> <span class="hidden-xs">Profile</span>
+                                    </a>
+                                </li>
+                                <li class="active">
+                                    <a href="#">
+                                        <i class="fa fa-envelope ico"></i><br /> <span class="hidden-xs">Mail</span>
+                                    </a>
+                                </li>
+                                 <li>
+                                    <a href="#">
+                                        <i class="fa fa-home ico"></i><br /> <span class="hidden-xs">My Farm</span>
+                                    </a>
+                                </li>
+                                 <li>
+                                    <a href="#">
+                                        <i class="fa fa-plus ico"></i><br /> <span class="hidden-xs">Quick Add</span>
+                                    </a>
+                                </li>
+                                 <li>
+                                    <a href="#">
+                                        <i class="fa fa-usd ico"></i><br /> <span class="hidden-xs">Earnings</span>
+                                    </a>
+                                </li>
+                                 <li>
+                                    <a href="#">
+                                        <i class="fa fa-cog ico"></i><br /> <span class="hidden-xs">Settings</span>
+                                    </a>
+                                </li>
+                            </ul>    
+                        </nav>
+                    </div><!-- End .wrapper-sidebar-nav -->
+                </div>
+                                
+                <div class="col-xs-10">
+                
+                    <!-- Begin .wrapper-content -->  
+                    <div class="wrapper-content">  
+                    
+                        <!-- Begin .masthead-email -->                                 
+                        <div class="masthead-email">
+                            <div class="row">
+                                <div class="col-sm-8">
+                                    <h3>Mail</h3>
+                                    <h4>You have <span class="badge badge-now">2</span> unread messages</h4>
+                                </div>                                
+                                <div class="col-sm-4">
+                                    <a href="#" class="btn btn-success btn-lg">NEW MESSAGE</a>
+                                </div>
+                            </div>
+                        </div><!-- End .masthead-email -->
+                        
+                        <!-- Begin .wrapper-email-nav -->               
+                        <div class="wrapper-email-nav">                        
+                            <nav class="navbar navbar-default navs-nav" role="navigation">
+                              <div class="container-fluid">
+                                <!-- Brand and toggle get grouped for better mobile display -->
+                                <div class="navbar-header">
+                                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                                    <span class="sr-only">Toggle navigation</span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                  </button>        
+                                  <a class="navbar-brand hidden-sm hidden-md hidden-lg" href="#">Menu</a>                   
+                                </div>                           
+                                <!-- Collect the nav links, forms, and other content for toggling -->
+                                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                                  <ul class="nav navbar-nav navbar-left">
+                                    <li class="active"><a  class="line" href="#"><i class="fa fa-hdd-o"></i>Inbox <span class="badge badge-now">2</span></a></li>
+                                    <li><a  class="line" href="#"><i class="fa fa-send"></i>Sent <span class="badge badge-now">2</span></a></li>
+                                    <li><a  class="line" href="#"><i class="fa fa-folder-open"></i>Junk <span class="badge badge-now">2</span></a></li>
+                                    <li><a href="#"><i class="fa fa-edit"></i>Drafts <span class="badge badge-now">2</span></a></li>
+                                    <li><a href="#"><i class="fa fa-star"></i>Starred <span class="badge badge-now">2</span></a></li>
+                                    <li><a href="#"><i class="fa fa-trash-o"></i>Delete</a></li>                       
+                                  </ul>                                 
+                                  <ul class="nav navbar-nav navbar-right">
+                                      <li class="dropdown">
+                                          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-folder"></i><b class="caret"></b></a>
+                                          <ul class="dropdown-menu">
+                                            <li><a href="#">Folder1</a></li>
+                                            <li><a href="#">Folder2</a></li>
+                                            <li><a href="#">Folder3</a></li>
+                                            <li class="divider"></li>
+                                            <li><a href="#">Folder4</a></li>
+                                          </ul>
+                                      </li>
+                                    <li><a href="#"><i class="fa fa-medkit"></i>Create Folder </a></li>                               
+                                  </ul>
+                                </div><!-- /.navbar-collapse -->
+                              </div><!-- /.container-fluid -->
+                            </nav>
+                        </div><!-- End .wrapper-email-nav -->
+                        
+                        <!-- Begin .row -->
+                        <div class="row">
+                        
+                            <!-- Begin .left -->
+                            <div class="left col-sm-5">
+                                <div class="content-left">
+                                   <div class="wrapper-input"> 
+                                       <div class="form-group has-feedback">                                        
+                                          <input type="text" placeholder="Search your rmail here..." class="form-control">
+                                          <span class="glyphicon glyphicon glyphicon-search form-control-feedback"></span>
+                                       </div>
+                                   </div>
+                                                                     
+                                   <!-- Begin .fotos -->
+                                   <ul class="fotos">
+                                   
+                                   <!-- Begin .item-person -->
+                                    <li class="item-person active">
+                                        <div  class="inner">
+                                            <div class="media">
+                                                <div class="pull-left">
+                                                    <input type="checkbox" checked=""/> 
+                                                </div>
+                                                <div class="media-body">
+                                                    <div class="media">
+                                                      <div class="pull-left" >
+                                                        <img src="./assets/images/img-1.png" width="48" height="48" />
+                                                      </div>
+                                                      <div class="media-body">
+                                                        <div class="main-text clearfix">
+                                                            <h4 class="h4 media-heading pull-left"><a href="#">Mani ji83</a></h4>
+                                                            <h6 class="h6 media-heading pull-right">Sep 13, 2012</h6> 
+                                                        </div>
+                                                        <h5 class="h5"><span>FindaFarm</span> - Mani ji83 wants to share...</h5>                                     
+                                                      </div>
+                                                      
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li><!-- End .item-person -->
+                                    
+                                    <!-- Begin .item-person -->
+                                    <li class="item-person active">
+                                        <div  class="inner">
+                                            <div class="media">
+                                                <div class="pull-left">
+                                                    <input type="checkbox" checked=""/> 
+                                                </div>
+                                                <div class="media-body">
+                                                    <div class="media">
+                                                      <div class="pull-left" >
+                                                        <img src="./assets/images/img-2.png" width="48" height="48" />
+                                                      </div>
+                                                      <div class="media-body">
+                                                        <div class="main-text clearfix">
+                                                            <h4 class="h4 media-heading pull-left"><a href="#">Steve Flann</a> <span class="badge badge-now">2</span></h4>
+                                                            <h6 class="h6 media-heading pull-right">Sep 13, 2012</h6> 
+                                                        </div>
+                                                        <div class="clearfix">
+                                                            <a href="#"><i class="pull-right glyphicon glyphicon-paperclip"></i></a><h5 class="h5"><span>FindaFarm</span> - Mani ji83 wants to share...</h5>                                     
+                                                        </div>                                    
+                                                      </div>
+                                                      
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li><!-- End .item-person -->
+                                    
+                                    <!-- Begin .item-person -->
+                                    <li class="item-person">
+                                        <div  class="inner">
+                                            <div class="media">
+                                                <div class="pull-left">
+                                                    <input type="checkbox"/> 
+                                                </div>
+                                                <div class="media-body">
+                                                    <div class="media">
+                                                      <div class="pull-left" >
+                                                        <img src="./assets/images/img-3.png" width="48" height="48" />
+                                                      </div>
+                                                      <div class="media-body">
+                                                        <div class="main-text clearfix">
+                                                            <h4 class="h4 media-heading pull-left"><a href="#">Mohammad Bilal</a></h4>
+                                                            <h6 class="h6 media-heading pull-right">Sep 11, 2012</h6> 
+                                                        </div>
+                                                        <h5 class="h5"><span>Servers Down </span> - Hello Mani, I need yo.</h5>                                     
+                                                      </div>                                                     
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li><!-- End .item-person -->
+                                    
+                                    <!-- Begin .item-person -->
+                                    <li class="item-person">
+                                        <div  class="inner">
+                                            <div class="media">
+                                                <div class="pull-left">
+                                                    <input type="checkbox"/> 
+                                                </div>
+                                                <div class="media-body">
+                                                    <div class="media">
+                                                      <div class="pull-left" >
+                                                        <img src="./assets/images/img-4.png" width="48" height="48" />
+                                                      </div>
+                                                      <div class="media-body">
+                                                        <div class="main-text clearfix">
+                                                            <h4 class="h4 media-heading pull-left"><a href="#">Gerrid Smith</a> <span class="badge badge-now">3</span></h4>
+                                                            <h6 class="h6 media-heading pull-right">Sep 10, 2012</h6> 
+                                                        </div>
+                                                        <h5 class="h5"><span>Password Changed </span> - hey man passw...</h5>                                     
+                                                      </div>                                                     
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li><!-- End .item-person -->
+                                    
+                                    <!-- Begin .item-person -->
+                                     <li class="item-person">
+                                        <div  class="inner">
+                                            <div class="media">
+                                                <div class="pull-left">
+                                                    <input type="checkbox"/> 
+                                                </div>
+                                                <div class="media-body">
+                                                    <div class="media">
+                                                      <div class="pull-left" >
+                                                        <img src="./assets/images/img-5.png" width="48" height="48" />
+                                                      </div>
+                                                      <div class="media-body">
+                                                        <div class="main-text clearfix">
+                                                            <h4 class="h4 media-heading pull-left"><a href="#">Mandy Jochmann</a></h4>
+                                                            <h6 class="h6 media-heading pull-right">Sep 10, 2012</h6> 
+                                                        </div>
+                                                        <h5 class="h5"><span>Current Project </span> - i got some free tim...</h5>                                     
+                                                      </div>                                                     
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li><!-- End .item-person -->
+                                    
+                                    <!-- Begin .item-person -->
+                                     <li class="item-person">
+                                        <div  class="inner">
+                                            <div class="media">
+                                                <div class="pull-left">
+                                                    <input type="checkbox"/> 
+                                                </div>
+                                                <div class="media-body">
+                                                    <div class="media">
+                                                      <div class="pull-left" >
+                                                        <img src="./assets/images/img-3.png" width="48" height="48" />
+                                                      </div>
+                                                      <div class="media-body">
+                                                        <div class="main-text clearfix">
+                                                            <h4 class="h4 media-heading pull-left"><a href="#">Mohammad Bilal</a> <span class="badge badge-now">9</span></h4>
+                                                            <h6 class="h6 media-heading pull-right">Aug 10, 2012</h6> 
+                                                        </div>
+                                                        <h5 class="h5"><span>New Files </span> - Awl is well. OK i have s...</h5>                                     
+                                                      </div>                                                     
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li><!-- End .item-person -->
+                                    
+                                    <!-- Begin .item-person -->
+                                    <li class="item-person">
+                                        <div  class="inner">
+                                            <div class="media">
+                                                <div class="pull-left">
+                                                    <input type="checkbox"/> 
+                                                </div>
+                                                <div class="media-body">
+                                                    <div class="media">
+                                                        <div class="pull-left" >
+                                                            <img src="./assets/images/img-3.png" width="48" height="48" />
+                                                        </div>
+                                                        <div class="media-body">
+                                                            <div class="main-text clearfix">
+                                                                <h4 class="h4 media-heading pull-left"><a href="#">Mohammad Bilal</a></h4>
+                                                                <h6 class="h6 media-heading pull-right">Sep 9, 2012</h6> 
+                                                            </div>
+                                                            <h5 class="h5"><span>WireFrames</span> - Updating few things. J...</h5>                                     
+                                                        </div>                                                     
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li><!-- End .item-person -->
+                                    
+                                    <!-- Begin .item-person -->
+                                    <li class="item-person">
+                                        <div  class="inner">
+                                            <div class="media">
+                                                <div class="pull-left">
+                                                    <input type="checkbox"/> 
+                                                </div>
+                                                <div class="media-body">
+                                                    <div class="media">
+                                                      <div class="pull-left" >
+                                                        <img src="./assets/images/img-1.png" width="48" height="48" />
+                                                      </div>
+                                                      <div class="media-body">
+                                                        <div class="main-text clearfix">
+                                                            <h4 class="h4 media-heading pull-left"><a href="#">Mani ji83</a></h4>
+                                                            <h6 class="h6 media-heading pull-right">Sep 8, 2012</h6> 
+                                                        </div>
+                                                        <div class="clearfix">
+                                                            <a href="#"><i class="pull-right glyphicon glyphicon-paperclip"></i></a><h5 class="h5"><span>FindaFarm</span> - Mani ji83 wants to share...</h5>                                     
+                                                        </div>                                   
+                                                      </div>                                                     
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li><!-- End .item-person -->
+                                    
+                                    <!-- Begin .item-person -->
+                                    <li class="item-person">
+                                        <div  class="inner">
+                                            <div class="media">
+                                                <div class="pull-left">
+                                                    <input type="checkbox"/> 
+                                                </div>
+                                                <div class="media-body">
+                                                    <div class="media">
+                                                      <div class="pull-left" >
+                                                        <img src="./assets/images/img-2.png" width="48" height="48" />
+                                                      </div>
+                                                      <div class="media-body">
+                                                        <div class="main-text clearfix">
+                                                            <h4 class="h4 media-heading pull-left"><a href="#">Steve Flann</a></h4>
+                                                            <h6 class="h6 media-heading pull-right">Sep 7, 2012</h6> 
+                                                        </div>
+                                                        <div class="clearfix">
+                                                            <a href="#"><i class="pull-right glyphicon glyphicon-paperclip"></i></a><h5 class="h5"><span>FindaFarm</span> - Mani ji83 wants to share...</h5>                                     
+                                                        </div>
+                                                      </div>                                                     
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li><!-- End .item-person -->
+                                    
+                                    <!-- Begin .item-person -->
+                                    <li class="item-person">
+                                        <div  class="inner">
+                                            <div class="media">
+                                                <div class="pull-left">
+                                                    <input type="checkbox"/> 
+                                                </div>
+                                                <div class="media-body">
+                                                    <div class="media">
+                                                      <div class="pull-left" >
+                                                        <img src="./assets/images/img-3.png" width="48" height="48" />
+                                                      </div>
+                                                      <div class="media-body">
+                                                        <div class="main-text clearfix">
+                                                            <h4 class="h4 media-heading pull-left"><a href="#">Mohammad Bilal</a></h4>
+                                                            <h6 class="h6 media-heading pull-right">Aug 29, 2012</h6> 
+                                                        </div>
+                                                        <h5 class="h5"><span>FindaFarm</span> - Mani ji83 wants to share...</h5>                                     
+                                                      </div>                                                     
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li><!-- End .item-person -->
+                                    
+                                    <!-- Begin .item-person -->
+                                    <li class="item-person">
+                                        <div  class="inner">
+                                            <div class="media">
+                                                <div class="pull-left">
+                                                    <input type="checkbox"/> 
+                                                </div>
+                                                <div class="media-body">
+                                                    <div class="media">
+                                                      <div class="pull-left" >
+                                                        <img src="./assets/images/img-4.png" width="48" height="48" />
+                                                      </div>
+                                                      <div class="media-body">
+                                                        <div class="main-text clearfix">
+                                                            <h4 class="h4 media-heading pull-left"><a href="#">Gerrid Smith</a> <span class="badge badge-now">10</span></h4>
+                                                            <h6 class="h6 media-heading pull-right">Aug 27, 2012</h6> 
+                                                        </div>
+                                                        <h5 class="h5"><span>FindaFarm</span> - Mani ji83 wants to share...</h5>                                     
+                                                      </div>                                                     
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li><!-- End .item-person -->
+                                    
+                                    <!-- Begin .item-person -->
+                                    <li class="item-person">
+                                        <div  class="inner">
+                                            <div class="media">
+                                                <div class="pull-left">
+                                                    <input type="checkbox"/> 
+                                                </div>
+                                                <div class="media-body">
+                                                    <div class="media">
+                                                      <div class="pull-left" >
+                                                        <img src="./assets/images/img-5.png" width="48" height="48" />
+                                                      </div>
+                                                      <div class="media-body">
+                                                        <div class="main-text clearfix">
+                                                            <h4 class="h4 media-heading pull-left"><a href="#">Mandy Jochmann</a></h4>
+                                                            <h6 class="h6 media-heading pull-right">Aug 23, 2012</h6> 
+                                                        </div>
+                                                        <h5 class="h5"><span>FindaFarm</span> - Mani ji83 wants to share...</h5>                                     
+                                                      </div>                                                     
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li><!-- End .item-person -->
+                                    
+                                    <!-- Begin .item-person -->
+                                    <li class="item-person">
+                                        <div  class="inner">
+                                            <div class="media">
+                                                <div class="pull-left">
+                                                    <input type="checkbox"/> 
+                                                </div>
+                                                <div class="media-body">
+                                                    <div class="media">
+                                                      <div class="pull-left" >
+                                                        <img src="./assets/images/img-3.png" width="48" height="48" />
+                                                      </div>
+                                                      <div class="media-body">
+                                                        <div class="main-text clearfix">
+                                                            <h4 class="h4 media-heading pull-left"><a href="#">Mani ji83</a></h4>
+                                                            <h6 class="h6 media-heading pull-right">Aug 17, 2012</h6> 
+                                                        </div>
+                                                        <h5 class="h5"><span>FindaFarm</span> - Mani ji83 wants to share...</h5>                                     
+                                                      </div>                                                     
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li><!-- End .item-person -->
+                                    
+                                    <!-- Begin .item-person -->
+                                    <li class="item-person">
+                                        <div  class="inner">
+                                            <div class="media">
+                                                <div class="pull-left">
+                                                    <input type="checkbox"/> 
+                                                </div>
+                                                <div class="media-body">
+                                                    <div class="media">
+                                                      <div class="pull-left" >
+                                                        <img src="./assets/images/img-3.png" width="48" height="48" />
+                                                      </div>
+                                                      <div class="media-body">
+                                                        <div class="main-text clearfix">
+                                                            <h4 class="h4 media-heading pull-left"><a href="#">Mani ji83</a></h4>
+                                                            <h6 class="h6 media-heading pull-right">Aug 7, 2012</h6> 
+                                                        </div>
+                                                        <h5 class="h5"><span>FindaFarm</span> - Mani ji83 wants to share...</h5>                                     
+                                                      </div>                                                     
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li><!-- End .item-person -->
+                                    
+                                    <!-- Begin .item-person -->
+                                    <li class="item-person">
+                                        <div  class="inner">
+                                            <div class="media">
+                                                <div class="pull-left">
+                                                    <input type="checkbox"/> 
+                                                </div>
+                                                <div class="media-body">
+                                                    <div class="media">
+                                                      <div class="pull-left" >
+                                                        <img src="./assets/images/img-3.png" width="48" height="48" />
+                                                      </div>
+                                                      <div class="media-body">
+                                                        <div class="main-text clearfix">
+                                                            <h4 class="h4 media-heading pull-left"><a href="#">Mohammad Bilal</a></h4>
+                                                            <h6 class="h6 media-heading pull-right">Aug 29, 2012</h6> 
+                                                        </div>
+                                                        <h5 class="h5"><span>FindaFarm</span> - Mani ji83 wants to share...</h5>                                     
+                                                      </div>                                                     
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li><!-- End .item-person -->
+                                    
+                                    <!-- Begin .item-person -->
+                                     <li class="item-person">
+                                        <div  class="inner">
+                                            <div class="media">
+                                                <div class="pull-left">
+                                                    <input type="checkbox"/> 
+                                                </div>
+                                                <div class="media-body">
+                                                    <div class="media">
+                                                      <div class="pull-left" >
+                                                        <img src="./assets/images/img-4.png" width="48" height="48" />
+                                                      </div>
+                                                      <div class="media-body">
+                                                        <div class="main-text clearfix">
+                                                            <h4 class="h4 media-heading pull-left"><a href="#">Gerrid Smith</a> <span class="badge badge-now">10</span></h4>
+                                                            <h6 class="h6 media-heading pull-right">Aug 27, 2012</h6> 
+                                                        </div>
+                                                        <h5 class="h5"><span>FindaFarm</span> - Mani ji83 wants to share...</h5>                                     
+                                                      </div>                                                     
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li><!-- End .item-person -->
+                                    
+                                    <!-- Begin .item-person -->
+                                    <li class="item-person">
+                                        <div  class="inner">
+                                            <div class="media">
+                                                <div class="pull-left">
+                                                    <input type="checkbox"/> 
+                                                </div>
+                                                <div class="media-body">
+                                                    <div class="media">
+                                                      <div class="pull-left" >
+                                                        <img src="./assets/images/img-5.png" width="48" height="48" />
+                                                      </div>
+                                                      <div class="media-body">
+                                                        <div class="main-text clearfix">
+                                                            <h4 class="h4 media-heading pull-left"><a href="#">Mandy Jochmann</a></h4>
+                                                            <h6 class="h6 media-heading pull-right">Aug 23, 2012</h6> 
+                                                        </div>
+                                                        <h5 class="h5"><span>FindaFarm</span> - Mani ji83 wants to share...</h5>                                     
+                                                      </div>                                                     
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li><!-- End .item-person -->
+                                    
+                                    <!-- Begin .item-person -->
+                                    <li class="item-person">
+                                        <div  class="inner">
+                                            <div class="media">
+                                                <div class="pull-left">
+                                                    <input type="checkbox"/> 
+                                                </div>
+                                                <div class="media-body">
+                                                    <div class="media">
+                                                      <div class="pull-left" >
+                                                        <img src="./assets/images/img-3.png" width="48" height="48" />
+                                                      </div>
+                                                      <div class="media-body">
+                                                        <div class="main-text clearfix">
+                                                            <h4 class="h4 media-heading pull-left"><a href="#">Mani ji83</a></h4>
+                                                            <h6 class="h6 media-heading pull-right">Aug 17, 2012</h6> 
+                                                        </div>
+                                                        <h5 class="h5"><span>FindaFarm</span> - Mani ji83 wants to share...</h5>                                     
+                                                      </div>                                                     
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li><!-- End .item-person -->
+                                    
+                                    <!-- Begin .item-person -->
+                                    <li class="item-person">
+                                        <div  class="inner">
+                                            <div class="media">
+                                                <div class="pull-left">
+                                                    <input type="checkbox"/> 
+                                                </div>
+                                                <div class="media-body">
+                                                    <div class="media">
+                                                      <div class="pull-left" >
+                                                        <img src="./assets/images/img-3.png" width="48" height="48" />
+                                                      </div>
+                                                      <div class="media-body">
+                                                        <div class="main-text clearfix">
+                                                            <h4 class="h4 media-heading pull-left"><a href="#">Mani ji83</a></h4>
+                                                            <h6 class="h6 media-heading pull-right">Aug 7, 2012</h6> 
+                                                        </div>
+                                                        <h5 class="h5"><span>FindaFarm</span> - Mani ji83 wants to share...</h5>                                     
+                                                      </div>                                                     
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li><!-- End .item-person -->
+                                   </ul><!-- End .fotos -->
+                                 </div>
+                            </div><!-- End .left -->                            
+                            
+                            <div class="col-sm-7">
+                                <!-- Begin .right -->
+                                <div class="right">                                   
+                                   <!-- Begin .right --> 
+                                   <div class="right-top clearfix"> 
+                                       <div class="col-sm-6"><h3 class="h3">New Files</h3></div> 
+                                       <div class="col-sm-6"><a href="#" class="btn btn-default pull-right"><i class="fa fa-print"></i>Print all</a></div>
+                                   </div>
+                                   <!-- End .right -->
+                                   <!-- Begin .wrapper-right-content -->
+                                   <div class="wrapper-right-content">
+                                       <!-- Begin .right-content -->
+                                       <div class="right-content">
+                                            <div class="right-content-top">
+                                                <p><a href="#">http://dribbble.com/shots/685597 -Blog/attachments/61978</a></p>
+                                                <h4>Thanks<br/>You's Billu Barber :)</h4>
+                                            </div>
+                                            <!-- Begin .item-post -->
+                                            <div class="item-post clearfix">
+                                                <!-- Begin .post-header -->
+                                                <div class="post-header clearfix">
+                                                    <div class="media col-md-7">
+                                                      <div class="pull-left" >
+                                                        <img src="./assets/images/img-min-1.png" width="32" height="32" />
+                                                      </div>
+                                                      <div class="media-body">
+                                                        <div class="main-text">
+                                                            <h4 class="h4"><a class="link" href="#"><span class="name">Steve Flann</span></a><span class="nowrap email">&lt;<a href="#">steve.flann@gmail.com</a>&gt;</span></h4>                                                        
+                                                        </div>
+                                                        <h5 class="h5 send-to">to <a href="#">Mohammad Bilal</a></h5> 
+                                                        <div class="dropdown">
+                                                              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="badge badge-now"><span class="fa fa-sort-desc"></span></span></a>
+                                                              <ul class="dropdown-menu">
+                                                                <li><a href="#">Item1</a></li>
+                                                                <li class="divider"></li>
+                                                                <li><a href="#">Item2</a></li>
+                                                                <li><a href="#">Item3</a></li>                                                             
+                                                                <li><a href="#">Item4</a></li>
+                                                              </ul>
+                                                        </div>                                    
+                                                      </div>                                                     
+                                                    </div>                                               
+                                                    <div class="col-md-5">                                                   
+                                                        <button type="button" class="btn btn-default pull-right" data-toggle="tooltip" data-placement="top" title="Reply"><i class="fa fa-mail-reply"></i></button>
+                                                        <span class="h6">September 10, 2012</span>
+                                                    </div>
+                                                    <div class="border-min clearfix">
+                                                    </div>
+                                                </div><!-- End .post-header -->
+                                                <!-- Begin .post-body -->
+                                                <div class="post-body">
+                                                    <p>Hello Bilal,</p><p> Adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolorem magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor.</p>
+                                                    <br />
+                                                    <p>Ane hendrerit in vulputate velit esse molestie consequat,</p>
+                                                    <br />
+                                                    <p>Geugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla</p>
+                                                    <br />
+                                                    <p>Tagna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud</p>
+                                                    <br />
+                                                    <p>Thanks</p>
+                                                    <p>Steve Flann</p>
+                                                </div><!-- End .post-body -->
+                                            </div><!-- End .item-post -->
+                                            <!-- Begin .item-post -->
+                                            <div class="item-post clearfix">
+                                                <!-- Begin .post-header -->
+                                                <div class="post-header clearfix">
+                                                    <div class="media col-md-7">
+                                                      <div class="pull-left" >
+                                                        <img src="./assets/images/img-min-2.png" width="32" height="32" />
+                                                      </div>
+                                                      <div class="media-body">
+                                                        <div class="main-text">
+                                                            <h4 class="h4"><a href="#"><span class="name">Mohammad Bilal</span></a> <span class="nowrap email">&lt;<a href="#">bilal88@gmail.com</a>&gt;</span></h4>                                                        
+                                                        </div>
+                                                        <h5 class="h5 send-to">to me &nbsp;&&nbsp; others</h5>
+                                                            <div class="dropdown">
+                                                              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="badge badge-now"><span class="fa fa-sort-desc"></span></span></a>
+                                                              <ul class="dropdown-menu">
+                                                                <li><a href="#">Item1</a></li>
+                                                                <li class="divider"></li>
+                                                                <li><a href="#">Item2</a></li>
+                                                                <li><a href="#">Item3</a></li>                                                             
+                                                                <li><a href="#">Item4</a></li>
+                                                              </ul>
+                                                            </div>
+                                                            
+                                                        </h5>                                     
+                                                      </div>                                                     
+                                                    </div>                                                
+                                                    <div class="col-md-5">                                                    
+                                                        <button type="button" class="btn btn-default pull-right" data-toggle="tooltip" data-placement="top" title="Reply"><i class="fa fa-mail-reply"></i></button>
+                                                        <i class="glyphicon glyphicon-paperclip"></i><span class="h6">September 10, 2012</span>
+                                                    </div>
+                                                    <div class="border-min clearfix">
+                                                    </div>
+                                                </div><!-- End .post-header -->
+                                                <!-- Begin .post-body -->
+                                                <div class="post-body clearfix">
+                                                    <p>Awl is well. Ok i have some updates dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit labortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor.</p>
+                                                    <br />
+                                                    <p>Ane hendrerit in vulputate velit esse molestie consequat,</p>
+                                                    <br />
+                                                    <p>Geugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla</p>
+                                                    <br />
+                                                    <p><a href="#">http://dribbble.com/shots/685597 -Blog/attachments/61978</a></p>
+                                                    <br />
+                                                    <p>Thanks</p>
+                                                    <p>Your's Billu Barber :)</p>
+                                                    <p class="bold">Attachment</p>
+                                                    <a href="#" title="Image">
+                                                        <img class="thumbnail" src="./assets/images/img-min-2.jpg" width="128" height="152" />
+                                                    </a>
+                                                    <div class="img-info">
+                                                        <p>Govt.-ID-Card.jpg</p>
+                                                        <p>560 KB &nbsp;  &nbsp; <a href="#">  View  Download</a></p>
+                                                    </div>
+                                                </div><!-- End .post-body -->
+                                            </div><!-- End .item-post -->                                      
+                                       </div><!-- End .right-content -->
+                                       <div class="wrapper-right-content-bottom">
+                                            <div class="media">
+                                                  <div class="pull-left" >                                                 
+                                                    <img src="./assets/images/img-min-1.png" width="32" height="32" />
+                                                  </div>
+                                                  <div class="media-body">                                              
+                                                     <div class="form-group">
+                                                        <textarea rows="4" class="form-control"></textarea> 
+                                                     </div>                                     
+                                                  </div> 
+                                            </div>
+                                       </div>
+                                   </div><!-- End .wrapper-right-content -->
+                                </div><!-- End .right -->
+                            </div>
+                        </div><!-- End .row -->                   
+                </div><!-- End .wrapper-content --> 
+                </div>
+            </div>            
+            <div class="bg-sidebar col-sm-2"></div>
+        </div> <!-- END .wrapper-dashboard -->
+    </div>    
+   
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="./assets/js/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="./assets/js/bootstrap.min.js"></script>    
+    <script src="./assets/js/scripts.js"></script>
+  </body>
+</html>
