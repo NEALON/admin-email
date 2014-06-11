@@ -4,7 +4,31 @@
 
 @import "variables";
 @import "bootstrap/bootstrap";
+@import "swiper";
+@import "scrollbar";
 @import "font-awesome";
+
+// Mixin for generating new styles
+@mixin btn-styles($btn-color: #555) {
+  @include gradient-vertical($start-color: $btn-color, $end-color: darken($btn-color, 12%));
+  @include reset-filter(); // Disable gradients for IE9 because filter bleeds through rounded corners
+  background-repeat: repeat-x;
+  border-color: darken($btn-color, 14%);
+
+  &:hover,
+  &:focus  {
+    background-color: darken($btn-color, 12%);
+    background-position: 0 -15px;
+  }
+
+  &:active,
+  &.active {
+    background-color: darken($btn-color, 12%);
+    border-color: darken($btn-color, 14%);
+  }
+}
+
+.btn-success { @include btn-styles($btn-success-bg); }
 
 .header { background-color: $white; border-bottom: 1px solid #aeaeae;
     .navbar-default {border: none;}
@@ -38,12 +62,12 @@
 .wrapper-dashboard { background: #fbfbfb; border: 1px solid #d6d6d6; margin-bottom: 50px;
     .wrapper-content { background: #f1f1f1; border-left: 1px solid #d6d6d6; min-height: 550px;
         margin-left: (-$grid-gutter-width/2);
-        @media(min-width: $screen-sm-min) { margin-left: -$grid-gutter-width;}
+        @media(min-width: $screen-sm-min) { margin-left: (-$grid-gutter-width - 20px);}
     }
 }
 
 .wrapper-sidebar-nav {/*max-width: 124px;*/ padding: 0; background-color: #fbfbfb; margin-right: (-$grid-gutter-width/2);
-    @media(min-width: $screen-sm-min) { padding: 10px;  margin-right: 0;}
+    @media(min-width: $screen-sm-min) { padding: 10px;  margin-right: 20px;}
     
     ul > li { margin-top: 10px; text-align: center;         
         a { color: #505050; display: block; padding: 3px 1px; text-decoration: none; 
@@ -93,7 +117,21 @@
     }
 }
 
-.fotos { padding-left: 0; border-right: 1px solid #d6d6d6; max-height: 1100px; overflow-x: hidden; overflow-y: scroll;
+.icon-paperclip { display: inline-block; height: 9px; width: 18px; background: url(../images/icons/pins.png); }
+
+.wrapper-fotos { border-right: 1px solid #e3e1e1;
+    .swiper-slide { float: none; }
+    .swiper-container{ height: 1100px; padding-right: 15px; background: #fafafa; }
+} 
+
+.wrapper-right-content{
+    .swiper-wrapper { border-right: 1px solid #e3e1e1; }
+    .swiper-slide { float: none; }
+    .swiper-container{ height: 1100px; padding-right: 15px; }
+    .swiper-scrollbar { right: 4px; }
+}
+
+.fotos { padding-left: 0; border-right: 1px solid #d6d6d6;
     .item-person{ display: block; border-bottom: 1px solid #d6d6d6;
             .main-text{padding-top: 13px;}
             &.active { 
@@ -106,9 +144,11 @@
                 input {margin-top: 25px;}
                 img {margin-top: 7px;}
                 > * { background-color: #fafafa; padding: 10px;}
-                h4, .h4 a {font-size: 11px;
-                    @media(min-width: $screen-sm-min) {font-size: 13px;}
-                    color: #464646; font-weight: bold;}
+                h4, .h4 a {font-size: 10px;color: #464646; font-weight: bold;
+                    @media(min-width: $screen-sm-min) {font-size: 11px;}
+                    @media(min-width: $screen-lg-min) {font-size: 13px;}
+                    .badge { margin-left: 1px; position: relative; top: -2px; }                        
+                }
                 .h5{color: #938f8f; margin-top: 0;}
                 .h6{color: #9c9c9c; float: left ! important; @media(min-width: $screen-md-min) {float: right ! important;}}
                 a {color: $black;}
@@ -143,15 +183,23 @@
                 i {padding-right: 5px;}
             }
         }
-        .wrapper-right-content{ max-height: 1100px; overflow-x: hidden; overflow-y: scroll; background-color: #fafafa;
+        .wrapper-right-content{ background-color: #fafafa;
             .right-content { background-color: $white; 
-                .right-content-top {padding-top: 10px; padding-bottom: 15px; border-bottom: 1px solid #d6d6d6; padding-left: 50px;}
+                .right-content-top {padding-top: 10px; padding-bottom: 15px; border-bottom: 1px solid #d6d6d6; padding-left: 57px;}
                 .item-post { border-bottom: 1px solid #d6d6d6;
                     .post-header {padding: 10px 0; 
                         .media{ padding-right: 0; overflow: visible;
                             .pull-left { margin-bottom: 12px;}
                             .media-body { overflow: visible;}                            
-                        }                      
+                        }               
+                        
+                        @media (min-width: $screen-md) {
+                            .badge {
+                                margin-left: 10px;
+                                position: relative;
+                                top: -1px;
+                            }
+                        }
                     }
                     .post-body {padding: 20px 44px 20px 57px;
                         p  { color: #403f3f; margin: 0 0 5px;}                       
@@ -176,15 +224,29 @@
     .dropdown { display: inline-block;}
     .h6 { display: inline-block;}
     .h6, h6 a { margin-right: 10px; color:#bbbbbb;}
-        .glyphicon { display: inline; margin-left: 10px; margin-right: 10px;}
+        .glyphicon { margin-left: 10px; margin-right: 10px;}
         .border-min { max-width: 210px; border-bottom: 1px solid #d6d6d6;}
         /*.pull-right{ float: none !important; margin-top:25px; @media(min-width: $screen-sm-min) {float: right;margin-top:0;}}*/                       
 }
 
-.wrapper-right-content-bottom { padding: 25px;
-    textarea { }
+.wrapper-right-content-bottom { padding: 16px 15px;
+    .form-group { margin-bottom: 0; }
 }
 
 .bold { font-weight: bold;}
 
 .nowrap { white-spacing: nowrap; }
+
+.swiper-scrollbar {
+  background:none;
+  position:absolute;
+  right:5px;
+  top:0.5%;
+  height:99%;
+  width:5px;
+}
+.swiper-scrollbar .swiper-scrollbar-drag {
+  border: 1px solid #878787;
+  border-radius: 1px;
+  background: #9c9c9c;
+}
